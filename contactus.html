@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color:lightcoral;
+  width:100%;
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size:18px;
+  bottom:0;
+line-height:2;
+border-radius:5px;
+ 
+
+}
+.navbar a.active {
+ 
+  background-color: crimson;
+}
+.dropdown {
+  float: left;
+ 
+
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  bottom:0;
+line-height:2;
+border-radius:5px;
+   
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+ 
+  
+}
+label
+{
+	color: black; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;
+}
+input[type=text], select, textarea {
+  width: 90%;
+  padding: 12px;
+  //border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+    background: rgba(0,0,0,0.3);
+    border: none;
+    outline: none;
+     color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 6px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+    -webkit-transition: box-shadow .5s ease;
+    -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+    -ms-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+  background-image: linear-gradient(to right,lightblue,white);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+border-radius:5px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.topnav-right {
+  float: right;
+}
+/*body {
+  font-family: Arial, Helvetica, sans-serif;
+}*/
+body {
+  //background-image:url("ch.jfif");
+  background-position: center;
+  background-size: cover;
+ background-color:#ADD8E6;
+  min-height: 560px;
+  
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  max-width: 460px;
+  position: absolute;
+  top: 15%;
+ bottom:10%;
+  right:50%;
+  left: 25%;
+margin:20px;
+  
+}
+
+.container{
+
+//width: 320px;
+
+background: #000;
+color: #fff;
+//top: 50%;
+//left: 50%;
+//position:absolute;
+//transform: translate(-50%,-50%);//movement of box
+box-sizing: border-box;
+//padding: 70px 30px;
+
+ border-style: solid;
+    border-width: 3px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-color: black;
+
+  opacity: 1;
+  float: center;
+ margin-left: 120px;
+
+
+  width: 100%;
+height:500px;
+  background:white;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+
+
+  &.back {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    top: -20px;
+    opacity: .8;
+    z-index: -1;
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    background: rgba(255, 255, 255, 0.6);
+    left: 0;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    z-index: -1;
+  }
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<a href="home.html" style="float:left;"><img src="main.jfif" height="60px" width="70px"></a>
+ <div class="topnav-right">
+ <a href="home.html" ><i class="fa fa-fw fa-home"></i>HOME</a>
+ <div class="dropdown">
+    <button class="dropbtn">LOGIN<i class="fa fa-fw fa-user"></i>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">ADMIN</a>
+      <a href="#">STUDENT</a>
+    </div>
+  </div> 
+  <a href="aboutus.html" ><i class="fa fa-user-circle"></i>ABOUT US</a>
+  <a href="contactus.html" class="active" style="margin-right:10px"><i class="fa fa-fw fa-envelope"></i>CONTACT</a>
+</div>
+</div>
+<div class="container">
+ <!-- <div style="text-align:center">
+    <h2>Contact Us</h2>
+    
+  </div>-->
+  <div class="row">
+    <div class="column">
+      <img src="https://thumbs.dreamstime.com/z/business-customer-care-service-concept-flat-icons-set-contact-us-support-help-desk-phone-call-website-click-133443954.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">State</label>
+        <select id="country" name="States">
+          <option value="australia">Punjab</option>
+          <option value="canada">Haryana</option>
+          <option value="usa">Maharashtra</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:90px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

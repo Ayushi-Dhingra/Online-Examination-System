@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<link rel="stylesheet"  href="style1.css">
+<body>
+<div class="loginbox">
+<img src="login.jpg" class="avatar">
+<h1>Change Password</h1>
+<form action="pass.jsp">
+<p>Username</p>
+<input type="email" name="e1" placeholder="Enter Username"><br><br>
+<p>Security Question</p>
+<select name="Q1" required>
+    <option value="">Select Your Security Question</option>
+<option value="What is your Nationality?">What is your Nationality?</option>
+<option value="What is your favourite color?">What is your favourite color?</option>
+<option value="What is your favourite book?">What is your favourite book?</option>
+</select><br><br>
+<input type="text" placeholder="Your Answer" name="ans">
+<br><br>
+<p>Password</p>
+<input type="password" name="p1" placeholder="Enter New Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+       title="Must contain at least one number and one uppercase and lowercase letter,
+        and at least 8 or more characters"><br>
+<br><br><input type="submit" name="" value="CHANGE PASSWORD">
+<br><br>
+</form>
+</div>
+</body>
+
+</html>

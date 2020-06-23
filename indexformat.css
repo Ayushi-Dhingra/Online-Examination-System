@@ -1,0 +1,33 @@
+#d1
+{
+padding-left: 900px;
+
+}
+h3
+{
+padding-left:120px;
+color:blue;
+}
+#d2
+{
+height:60px;
+}
+#b1,#b2,#b3,#b4
+{
+  border: none;
+  background-color:white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+
+}
+img
+{
+ padding: 5px;
+  width: 1500px;
+background-size: cover;
+}
+#b1:hover,#b2:hover, #b3:hover,#b4:hover {
+  background-color: yellow;
+}

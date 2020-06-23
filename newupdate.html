@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: inherit;
+}
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 600px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 90%;
+  padding: 12px;
+  //border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+    background: rgba(0,0,0,0.3);
+    border: none;
+    outline: none;
+     color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 6px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+    -webkit-transition: box-shadow .5s ease;
+    -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+    -ms-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+  background-image: linear-gradient(to right,#FA8072,white);
+}
+label
+{
+	color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;
+}
+h2
+{
+	color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px;font-size:20px;
+	background: rgba(0,0,0,0.3);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    color: blac;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+    -webkit-transition: box-shadow .5s ease;
+    -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+    -ms-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+text-align: center;
+}
+input[type=submit] {
+  background-color:salmon;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: pink;
+}
+
+
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 0%;
+ bottom:10%;
+  right:25%;
+  left: 25%;
+margin:20px;
+  
+}
+
+.container{
+opacity: 1;
+  float: center;
+ //margin-left: 120px;
+ width: 100%;
+height:900px;
+  background-image: linear-gradient(to bottom right,black,lightblue);
+  padding-left: 10px;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+
+}
+  &.back {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    top: -20px;
+    opacity: .8;
+    z-index: -1;
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    background: rgba(255, 255, 255, 0.6);
+    left: 0;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    z-index: -1;
+  }
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.header {
+  padding: 20px;
+  text-align: center;
+ background:grey;
+  color: white;
+  font-size: 15px;
+}
+body {
+background-color: #F5DEB3	;
+background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcREnF6vEySyTWaf98IbBM7FQZ0Q0IHNtfhSm4o4NwDbdqGVo0mx&usqp=CAU');
+  background-position: center;
+  background-size: cover;
+ 
+  min-height: 150vh;
+  
+  overflow: scroll;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+</head>
+<body>
+ <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+  <a href="passa.html">Forgot Password</a>
+  <br>
+  <a href="admintable.jsp">Details of Login User</a>
+  <br>
+  <a href="adminque.jsp">List Of Qustions</a>
+  <br>
+  <a href="resulttable.jsp">Results of the students</a>
+  <br>
+  <a href="admincontact.jsp">Contact Us Details</a>
+  <br>
+  <a href="newupdate.html">Change Question</a>
+  <br>
+  <a href="logout.jsp">Logout</a>
+  <br>
+</div>
+<button class="openbtn" onclick="openNav()">OPTIONS</button>  
+<div class="container">
+  <div style="text-align:center">
+    <h2>REPLACE QUESTION</h2>
+    
+  </div>
+ 
+      <form action="correct.html">
+
+<label>Enter Question number that you want to change:</label>
+<input type="text" placeholder="Enter number " name="ques" ></input>
+
+<br>
+
+<label>Enter new question: </label>
+<textarea placeholder="Enter question.." style="height:90px" name="t2"></textarea>
+
+<label>Option 1:</label><input type="text" placeholder="option1" name="o1"/>
+<label>Option 2:</label><input type="text" placeholder="option2" name="o2"/>
+<label>Option 3:</label><input type="text" placeholder="option3" name="o3"/>
+<label>Option 4:</label><input type="text" placeholder="option4" name="o4"/>
+
+<label>Correct answer:</label>
+<input type="text" name="ans"/>
+<br>
+<center><button value="Submit" class="button">Submit</button></center>
+
+</form>
+ 
+</div>
+</body>
+</html>

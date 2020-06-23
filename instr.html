@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+   <head>
+   	<style>
+   		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+//html { width: 100%; height:100%; overflow:hidden; }
+
+body { 
+    width: 100%;
+    height:100%;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    }
+button {
+  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: 650px;
+  cursor:pointer;
+ }
+
+body{background-image:radial-gradient(white,#fffdd0);}
+h1 { color: red; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center;font-size: 35px; }
+
+li { 
+  
+    margin-bottom: 10px; 
+    
+    
+    padding: 5px;
+    font-size: 15px;
+    color:#00008B;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  
+  
+    
+ -webkit-transition: box-shadow .5s ease;
+    -moz-transition: box-shadow .5s ease;
+    -o-transition: box-shadow .5s ease;
+    -ms-transition: box-shadow .5s ease;
+    transition: box-shadow .5s ease;
+   
+}
+#login {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+#login td, #login th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#login tr:hover {background-color: #ddd;}
+
+#login th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:   #800000;
+  color: white;
+}
+   	</style>
+   </head>
+   <body onload="startTimer()">
+       <h1>TEST INSTRUCTIONS</h1>
+       <p id="para" style="color:black;background-color:red;margin-left:88%; font-size:18px"></p>
+   
+       <ul>  <li>The test is divided into 2 sections containing 10 questions each.</li></ul>
+        <table id="login">
+        	<tr>
+        	<th>Sr No.</th>
+        	<th>Section Name</th>
+        	<th>Total Time</th>
+        </tr>
+        <tr>
+        	<td>I</td>
+        	<td>Arthimetic Calculations</td>
+        	<td>15:00 mins</td>
+        </tr>
+        <tr>
+        	<td>II</td>
+        	<td>Programming Concepts</td>
+        	<td>15:00 mins</td>
+        </tr>
+    </table>
+        <ul>
+<li>Click one of the answer, simply click the desired option button.</li>
+<li>No one else should be present in the surroundings other than the candidate during the test. </li> 
+<li>Candidate can change their response of attempted answer anytime during examination slot time by clicking anonther answer which candidates want to change an answer.</li>
+<li>Once the candidate have completed the test he/she can proceed to click on <b>Test Completed</b> to finish the test.</li>  
+<li>All the answered questions will be counted for calculating the final score.</li>
+<li>No bio breaks are permitted during the test.</li> 
+<li>Candidate is not allowed to use a calculator during the test. A plain paper and a pencil are allowed for rough work. </li>
+<li>Do not click final <b>SUBMIT</b> unless you have compeleed the exam.In case you click final <b>SUBMIT</b> you will not be permitted to continue.</li>
+<li>Candidates should make sure that they are using the same laptop /desktop for all the tests.</li>
+<li>Score obtained will be displayed immediately after the test.</li>
+        </ul><br><br>
+<button onclick="clickk()">START TEST</button>
+<script>
+    function clickk()
+    {
+        window.location="test.jsp";
+    }
+     var timer=60;
+        var min=00,sec=00;
+        
+        function startTimer()
+        {
+           
+            min=parseInt(timer/60);
+            sec=parseInt(timer%60);
+            if(timer<1)
+            {
+                window.location="test.jsp";
+            }
+            document.getElementById("para").innerHTML="<b>Time Left: 0"+min.toString()+":"+sec.toString()+"</b>";
+            timer--;
+            setTimeout(function(){
+                startTimer();
+            },2000);
+            
+        }
+    </script>
+   </body> 
+</html>
