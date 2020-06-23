@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing:100%;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://www.google.com/search?q=about+us&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjSqKeS_u3pAhWkwjgGHbOCDpoQ_AUoAXoECA0QAw&biw=1366&bih=657#imgrc=uhNjBV_BEsqVHM");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: #fffdd0;
+  //background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: #228B22;
+  font-weight: bold;
+  //border: 3px solid #f1f1f1;
+  position: absolute;
+  top:55%;
+left:50%;
+  transform: translate(-50%, -50%);
+  //z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: left;
+  font-size:18px;
+
+}
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color:lightcoral;
+  width:100%;
+
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size:18px;
+  bottom:0;
+line-height:2;
+border-radius:5px; 
+
+}
+
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float:right;
+}
+
+
+
+/* Active/current link */
+.navbar a.active {
+ 
+  background-color: crimson;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    
+  }
+ .header-right {
+    float: none;
+  }
+}
+
+
+.dropdown {
+  float: left;
+ 
+
+  overflow: hidden;
+border-radius:5px;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 8px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  bottom:0;
+line-height:2;	
+border-radius:5px;				
+   
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+ 
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+border-radius:5px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background-color:pink;
+}
+ *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.topnav-right {
+  float: right;
+}
+
+.title {
+  color: grey;
+}
+.button {
+ color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+  cursor: pointer;
+  border: black;
+  border-radius: 12px;
+ border: 2px solid #e7e7e7;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+
+.button:hover {
+background-color:grey;}
+
+html { width: 100%; height:100%; overflow:hidden; }
+</style>
+</head>
+<body>
+<div class="navbar">
+<a href="home.html" style="float:left;"><img src="main.jfif" height="60px" width="70 px"></a>
+ <div class="topnav-right">
+
+ <a href="home.html" ><i class="fa fa-fw fa-home"></i>HOME</a>
+ <div class="dropdown">
+    <button class="dropbtn">LOGIN<i class="fa fa-fw fa-user"></i>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="admin_home.html">ADMIN</a>
+      <a href="login.html">STUDENT</a>
+    </div>
+  </div> 
+  <a href="aboutus.html" class="active"><i class="fa fa-user-circle"></i>ABOUT US</a>
+  <a href="contactus.html" style="margin-right:10px" ><i class="fa fa-fw fa-envelope"></i>CONTACT</a>
+</div>
+</div>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+    <h1 style="font-family:verdana ;color:orange"  ><center>ABOUT US</center></h1>
+
+ 
+  <p>In this era,every single eprson and work depends on technology even the examination system. Online Examination System is technology-driven way to simplify examination activities like defining exam patterns with question bank, defining exam timer, objective/ subjective question sections, conducting exams using the computer or mobile devices in a paperless manner.
+<ul>
+<li>Online Examination System is a cost-effective , scalable way to convert traditional pen and paper-based exams to online and paperless mode.</li>
+
+<li>Candidates can appear for the exam using any desktop, laptop or mobile device with a browser.</li> <li>Exam results can be generated instantly for the objective type of questions.</li>
+
+ <li>It can simplify overall examination management and result in generation activity.</li></ul>
+Platform is used to take online assessments ,  mock tests, and placement papers. It provides flexibility and provides certain features as negative marking, random questions and many more.</p>
+
+<p> You need to undergo certain steps to start your online exam activity: </p>
+<ol><li>REGISTER/LOGIN</li>
+<li>SELECT TEST</LI>
+<LI>ENTER CREDENTIALS</LI>
+<LI>START TEST</LI>
+</ol>
+
+
+<!--
+
+<h3> Online Tests</h3>
+Test can be of following types:
+<ol>
+<li>Multiple Choice Questions
+<li>Fill in the blanks
+<li>Match the Following
+<li>True/ False type questions
+<li>Multiple Selection of Correct Answers
+<li>Subjective Questions to write answers
+<li>Psychometric Questions</ol>
+
+<h3>Exam Pattern</h3>
+1.The exam will have negative marking for wrong answers .
+2.Exam will have 3 difficulty levels.
+3.Questions will have random orders for each student.
+
+<h3>Analytics</h3>
+The result of exams can be derives in the form of statistics. Result can be in any analytical form . It can be Bar graph, pie chart,Table form , etc.
+
+<h3>Remote Proctoring</h3>
+For security of students and admin data and to prevent cheating in exams, proper procedure is followed. Webcams are used to prevent cheating during exams. All the activities of students are monitered carefully in the backend. 
+<br>
+<hr>-->
+</div>
+</body>
+</html>
